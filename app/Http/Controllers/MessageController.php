@@ -17,6 +17,6 @@ class MessageController extends Controller
     {
     	$number = '';
     	$message = '';
-    	$message = Globe::send($number, $message, $this->app_secret, $this->app_id, $this->app_secret);
+    	$message = Globe::send($number, $message, $this->passphrase, $this->app_id, $this->app_secret);
     }
 }
