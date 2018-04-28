@@ -7,12 +7,15 @@ use Illuminate\Http\Request;
 
 class MessageController extends Controller
 {
+	protected $passphrase, $app_id, $app_secret;
+	
 	public function __construct()
 	{
-		$this->passphrase = env('GLOBE_PASSPHRASE');
-		$this->app_id = env('GLOBE_APP_ID');
-		$this->app_secret = env('GLOBE_APP_SECRET');
+		$passphrase = env('GLOBE_PASSPHRASE');
+		$app_id = env('GLOBE_APP_ID');
+		$app_secret = env('GLOBE_APP_SECRET');
 	}
+
     public function index()
     {
     	$number = '';
